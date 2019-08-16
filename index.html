@@ -15,5 +15,12 @@
 
     <body>
         <h1 class="vertical-container">Hello World</h1>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js').then(function() {
+                    console.log('Service Worker Registered')
+                })
+            }
+        </script>
     </body>
 </html>
